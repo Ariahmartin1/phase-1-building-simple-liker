@@ -1,9 +1,26 @@
-// Defining text characters for the empty and full hearts for you to use later.
+
 const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
-// Your JavaScript code goes here!
 
+const likeOptions = document.querySelectorAll(".like-glyph") 
+
+const cb = (e) => {
+  const heart =e.target
+  mimicServerCall()
+  .then(function () {
+    // how to change the heart to a full heart
+    //how to add the .activated-heart class to make the heart appear red
+  })
+  .catch(function(error) {
+   //how to remove the .hidden class from error modal?
+   // how to use setTimeOut to return the .hidden class to error modal after 3 seconds?
+  });
+}
+
+for (const option of likeOptions) {
+  option.addEventListener("click", cb);
+}
 
 
 
